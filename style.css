@@ -3,9 +3,17 @@
 #wat{
     font-family: 'Poppins';
     color: #000;
-    font-size: 40px;
+    font-size: 45px;
 }
 
-h2{
+h1{
     font-family: 'Poppins';
+}
+
+button{
+    border: none;
+    background: none;
+    font-family: "Poppins";
+    font-size: 25px;
+    color: #0f0;
 }
