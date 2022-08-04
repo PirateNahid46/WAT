@@ -21,6 +21,7 @@ function myTimer() {
     Shown.push(word);
     audio.play();
   }
+
   
   
   
