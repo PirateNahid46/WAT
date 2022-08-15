@@ -1,4 +1,3 @@
-var adblock = true;
 document.getElementById("main").style.display="none";  
   const firebaseConfig = {
     apiKey: "AIzaSyDujkO1_75W09NeIsK75W7ke1lK1WRo7Jg",
