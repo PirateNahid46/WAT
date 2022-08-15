@@ -1,6 +1,48 @@
+document.getElementById("main").style.display="none";  
+  const firebaseConfig = {
+    apiKey: "AIzaSyDujkO1_75W09NeIsK75W7ke1lK1WRo7Jg",
+    authDomain: "pwat-ee02e.firebaseapp.com",
+    projectId: "pwat-ee02e",
+    storageBucket: "pwat-ee02e.appspot.com",
+    messagingSenderId: "413650120122",
+    appId: "1:413650120122:web:7610803b00805e0035c183",
+    measurementId: "G-GKRYXXJVHZ"
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+  
+
+
 var x = -1;
- let Words;
-const set1 = ["Displaced", "Sex", "Virgin", "Girl", "Grief", "Dash", "Women", "Dedicate", "Misfortune", "Luck", "Sound", "Light", "Sun", "Honest", "Word", "Hard", "People", "Success", "Mind", "Late", "Secret", "Stone", "Money", "Clash", "Rose", "Morning", "Sleep", "Game", "Ear", "Travel", "Figure", "Spider", "Sincerity", "Seniors", "Efficient", "Bullet", "Lonely", "Equal", "Request", "Assemble", "Field", "Week", "Miss", "Dawn", "Success", "Gentle", "Need", "Cry", "Push", "Task", "Quarelling", "Challenge", "Keen", "Rumour", "Crazy", "Zero", "Joy", "Pale", "Society", "State", "Designation", "President", "Blow", "Check", "Alarm", "Corruption", "Newspaper", "Sorrow", "Death", "Judge", "Noble", "Guitar", "Pious", "Favour", "Love", "Pull", "Fool", "Lesson", "Fight", "Shoe", "Waste", "Dear", "Brains", "Action", "Annoy", "Honesty", "Save", "Native", "Refuse", "Low", "Taught", "Grass", "Crowd", "Lip", "Police", "Study", "Wide", "Surplus", "Discipline", "Clerk", "Respect", "Father", "Embrace", "Gun", "Freedom", "Glad", "Ship", "Hate", "Bring", "Coup", "Cycle", "Air", "Loose", "Sword", "Power", "Lonely", "Hunting", "Tea"];
+let Words;
+let set1 = [];
+load();
+var ArrayM = [];
+function load(){
+  
+  const fetchChat = db.ref("words/");
+  fetchChat.on("child_added", function(snapshot) {
+    const messages = snapshot.val();
+    set1.push(messages.name);
+  });
+}
+
+
+function loaded(){
+  document.getElementById("main").style.display="block";
+  document.getElementById("load").style.display="none";
+  ArrayM = splitToChunks(set1, 80)
+  for(let l=1; l<=ArrayM.length;l++){
+    var g = document.getElementById("set");
+    var option = document.createElement("option");
+    option.value = l;
+    console.log(option.value);
+    option.text = "Set "+l;
+    g.append(option);
+  }
+  
+}
 
 
 function splitToChunks(array, parts) {
@@ -16,17 +58,23 @@ function splitToChunks(array, parts) {
 
 
 
+
+
+
+
+
 let audio = new Audio();
 audio.src = "src/sound.mp3";
 let myVar;
 let Shown = [];
 
 function start(){
+  
  
   var time = document.getElementById("time").value;
   var setV = document.getElementById("set").value;
   
-  var ArrayM = splitToChunks(set1, 80);
+
   Words = ArrayM[setV-1];
   
   document.getElementById("wat").innerHTML = "Wait for "+time+"s";
