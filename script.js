@@ -27,6 +27,19 @@ function load(){
     set1.push(messages.name);
   });
 }
+let checker;
+checker = setInterval(check, 1000);
+function check(){
+  var goBtn = document.getElementById('Go');
+  if (set1.length == 0){
+    goBtn.innerHTML = "Loading"
+    
+    
+  }else{
+    goBtn.innerHTML = 'Go';
+    goBtn.removeAttribute('disabled');
+  }
+}
 
 
 function loaded(){
