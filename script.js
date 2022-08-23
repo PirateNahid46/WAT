@@ -77,6 +77,7 @@ function splitToChunks(array, parts) {
 
 
 let audio = new Audio();
+audio.src = "src/sound.mp3";
 
 let myVar;
 let Shown = [];
@@ -89,9 +90,7 @@ function start(){
   var time = document.getElementById("time").value;
   var setV = document.getElementById("set").value;
   
-  if(soundCheck.checked){
-    audio.src = "src/sound.mp3";
-  }
+  
   
   
 
@@ -117,7 +116,10 @@ function myTimer() {
     x++;
     document.getElementById("wat").innerHTML = finalWord;
     Shown.push(word);
-    audio.play();
+    if (soundCheck.checked) {
+      audio.play();
+    }
+    
   }
 
   
