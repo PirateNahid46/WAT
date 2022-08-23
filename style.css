@@ -1,24 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+:root{
+  --text-color: #000;
+  --bg-color:#fff;
+  --btn-color:#121212;
+}
+
+.darkmode{
+  --text-color: #fff;
+  --bg-color:#121212;
+  --btn-color:#f2f2f2;
+}
+.darkbtn{
+  color: var(--text-color);
+  background:var(--bg-color);
+  position: absolute;
+  right: 5px;
+}
+
 
 #wat{
     font-family: 'Poppins';
-    color: #000;
+    color: var(--text-color);
     font-size: 45px;
+}
+body{
+  background: var(--bg-color);
 }
 
 h1{
     font-family: 'Poppins';
+    color: var(--text-color);
 }
 
 label{
     font-family: 'Poppins';
+    color: var(--text-color);
 }
 
 option{
     font-family: 'Poppins';
+    color: var(--text-color);
 }
 select{
     font-family: 'Poppins';
+    color: var(--text-color);
+    background: var(--bg-color);
 }
 #ui{
   line-height: 150%;
@@ -27,10 +53,11 @@ select{
 
 button{
     border: none;
-    background: #121212;
+    background: var(--btn-color);
     font-family: "Poppins";
     font-size: 25px;
     color: #0f0;
     border-radius: 12px;
     margin: 20px;
+    padding: 5px;
 }
