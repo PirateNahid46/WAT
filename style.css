@@ -20,13 +20,17 @@ option{
 select{
     font-family: 'Poppins';
 }
-
+#ui{
+  line-height: 150%;
+}
 
 
 button{
     border: none;
-    background: none;
+    background: #121212;
     font-family: "Poppins";
     font-size: 25px;
     color: #0f0;
+    border-radius: 12px;
+    margin: 20px;
 }

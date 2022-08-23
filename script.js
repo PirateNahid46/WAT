@@ -77,15 +77,22 @@ function splitToChunks(array, parts) {
 
 
 let audio = new Audio();
-audio.src = "src/sound.mp3";
+
 let myVar;
 let Shown = [];
+ var serial = document.getElementById('serial');
+ var soundCheck = document.getElementById('sound');
 
 function start(){
   
  
   var time = document.getElementById("time").value;
   var setV = document.getElementById("set").value;
+  
+  if(soundCheck.checked){
+    audio.src = "src/sound.mp3";
+  }
+  
   
 
   Words = ArrayM[setV-1];
@@ -99,8 +106,16 @@ function myTimer() {
   if(Shown.includes(word)){
     myTimer();
   }else{
+    let finalWord;
+    if(serial.checked){
+      finalWord = x +2 +'. ' +word;
+    }else{
+      finalWord = word
+    }
+    
+    
     x++;
-    document.getElementById("wat").innerHTML = word;
+    document.getElementById("wat").innerHTML = finalWord;
     Shown.push(word);
     audio.play();
   }
@@ -114,3 +129,4 @@ function myTimer() {
     document.getElementById("wat").innerHTML = "Finished";
 	}
 }
+
