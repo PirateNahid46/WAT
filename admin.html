@@ -6,15 +6,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
 </head>
+<style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+  body{
+    font-family: 'Poppins';
+  }
+  form{
+    position: fixed;
+    background: #121212ff;
+    border-radius: 8px;
+    padding: 15px;
+    font-family: 'Poppins';
+  }
+  input{
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 8px;
+    font-family: 'Poppins';
+  }
+  button{
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 8px;
+    background: #f0fff0;
+    font-family: 'Poppins';
+  }
+  li{
+    font-family: 'Poppins';
+  
+  }
+</style>
 
 <body>
   <form autocomplete="off" id="authform">
         
-        <label>Word:</label>
-        <br>
         <input id="namebox" placeholder="Word" class="textbox" type="text">
         <button id="subName-btn" class="sub" type="submit">Submit</button>
         </form>
+        <ol id="list">
+        
+        </ol>
+        <br id="bottom">
+        
+        
+        
         
         
         <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>

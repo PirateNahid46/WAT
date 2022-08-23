@@ -18,8 +18,13 @@
    fetchChat.on("child_added", function(snapshot) {
      const messages = snapshot.val();
      set1.push(messages.name);
+     document.getElementById('list').innerHTML +='<li>'+messages.name+'</li>';
      console.log(messages.name);
+      location.href='#bottom';
    });
+   
+   
+   
  }
 
 document.getElementById("authform").addEventListener("submit", getname);
@@ -27,6 +32,8 @@ document.getElementById("authform").addEventListener("submit", getname);
 function getname(e) {
   e.preventDefault();
   const name = document.getElementById("namebox");
+  
+ 
 
   const username = name.value;
   
