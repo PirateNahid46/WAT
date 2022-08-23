@@ -52,7 +52,12 @@ function loaded(){
     option.value = l;
     console.log(option.value);
     option.text = "Set "+l;
-    g.append(option);
+    if(ArrayM[l-1].length == 80){
+      g.append(option);
+    }
+    else{
+      console.log('Set '+l+' doesn\'t have enough words');
+    }
   }
   
 }
