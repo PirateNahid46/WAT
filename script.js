@@ -61,7 +61,7 @@ function loaded(){
   }
   
 }
-
+//Pirate
 
 function splitToChunks(array, parts) {
   let result = [];
