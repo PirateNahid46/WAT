@@ -3,6 +3,7 @@
   --text-color: #000;
   --bg-color:#fff;
   --btn-color:#121212;
+  --txt-size: 30px;
 }
 
 .darkmode{
@@ -17,29 +18,46 @@
   right: 5px;
 }
 
+b{
+  color: var(--text-color);
+  font-size: var(--txt-size);
+  position: absolute;
+  bottom: 5%;
+}
+
+.header{
+  display: block;
+  justify-self: center;
+}
 
 #wat{
     font-family: 'Poppins';
     color: var(--text-color);
-    font-size: 45px;
+    font-size: 100px;
 }
 body{
   background: var(--bg-color);
 }
 
-h1{
+.title{
+    display: block;
+    width: 100%;
     font-family: 'Poppins';
     color: var(--text-color);
+    font-size: 70px;
+    text-align: center;
 }
 
 label{
     font-family: 'Poppins';
     color: var(--text-color);
+    font-size: var(--txt-size);
 }
 
 option{
     font-family: 'Poppins';
     color: var(--text-color);
+    font-size: var(--txt-size);
    
 }
 select{
@@ -47,6 +65,13 @@ select{
     color: var(--text-color);
     background: var(--bg-color);
     border-radius: 4px;
+    font-size: var(--txt-size);
+}
+input{
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
 }
 #ui{
   line-height: 150%;
@@ -57,9 +82,26 @@ button{
     border: none;
     background: var(--btn-color);
     font-family: "Poppins";
-    font-size: 25px;
+    font-size: var(--txt-size);
     color: #0f0;
     border-radius: 8px;
     margin: 20px;
     padding: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  #wat{
+    font-size: 45px;
+  }
+  .title{
+    font-size: 30px;
+  }
+  :root{
+    --txt-size:15px;
+  }
+  input{
+    height: 18px;
+    width: 18px;
+  }
 }
