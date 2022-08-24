@@ -23,6 +23,7 @@ b{
   font-size: var(--txt-size);
   position: absolute;
   bottom: 5%;
+  font-family: 'Poppins';
 }
 
 .header{
