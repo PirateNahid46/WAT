@@ -5,6 +5,9 @@
   --btn-color:#121212;
   --txt-size: 30px;
 }
+strong{
+  font-family: 'Poppins';
+}
 
 .darkmode{
   --text-color: #fff;
