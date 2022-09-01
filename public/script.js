@@ -134,6 +134,7 @@ function myTimer() {
   if(x == 80){
   	clearInterval(myVar);
     document.getElementById("wat").innerHTML = "Finished";
+    document.getElementById("wat").style.color = "#0f0";
 	}
 }
 

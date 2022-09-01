@@ -27,7 +27,8 @@ if (x_width) {
   console.log("No AdBlocker Detected")
 
 } else {
+  document.getElementById("Go").style.display="none";
   alert("Please turn off your adblocker");
-  document.getElementById("main").style.display="none";
+  
 
 }
