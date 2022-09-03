@@ -45,6 +45,7 @@ body{
 input{
   display: inline-block;
   width: 10%;
+  background-color: var(--bg-color);
   font-family: 'Poppins';
   color: var(--text-color);
   font-size: var(--txt-size);
