@@ -42,6 +42,14 @@ b{
 body{
   background: var(--bg-color);
 }
+input{
+  display: inline-block;
+  width: 10%;
+  font-family: 'Poppins';
+  color: var(--text-color);
+  font-size: var(--txt-size);
+
+}
 
 .title{
     display: block;
@@ -71,9 +79,9 @@ select{
     border-radius: 4px;
     font-size: var(--txt-size);
 }
-input{
-  width: 30px;
+.check{
   height: 30px;
+  width: 30px;
   border: none;
   border-radius: 5px;
 }

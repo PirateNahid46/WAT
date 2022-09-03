@@ -45,14 +45,17 @@ function check(){
 function loaded(){
   document.getElementById("main").style.display="block";
   document.getElementById("load").style.display="none";
-  ArrayM = splitToChunks(set1, 80)
+  var size = document.getElementById("noofwords").value;
+  console.log(size);
+  
+  ArrayM = splitToChunks(set1, parseInt(size))
   for(let l=1; l<=ArrayM.length;l++){
     var g = document.getElementById("set");
     var option = document.createElement("option");
     option.value = l;
     console.log(option.value);
     option.text = "Set "+l;
-    if(ArrayM[l-1].length == 80){
+    if(ArrayM[l-1].length == parseInt(size)){
       g.append(option);
     }
     else{
