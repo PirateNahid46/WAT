@@ -13,7 +13,7 @@ document.getElementById("main").style.display="none";
   const db = firebase.database();
   
 
-
+var size = 80;
 var x = -1;
 let Words;
 let set1 = [];
@@ -45,8 +45,7 @@ function check(){
 function loaded(){
   document.getElementById("main").style.display="block";
   document.getElementById("load").style.display="none";
-  var size = document.getElementById("noofwords").value;
-  console.log(size);
+  size = document.getElementById("noofwords").value;
   
   ArrayM = splitToChunks(set1, parseInt(size))
   for(let l=1; l<=ArrayM.length;l++){
@@ -134,7 +133,7 @@ function myTimer() {
   
   
   
-  if(x == 80){
+  if(x == size){
   	clearInterval(myVar);
     document.getElementById("wat").innerHTML = "Finished";
     document.getElementById("wat").style.color = "#0f0";
