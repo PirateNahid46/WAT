@@ -87,7 +87,6 @@ let audio = new Audio();
 audio.src = "src/sound.mp3";
 
 let myVar;
-let Shown = [];
  var serial = document.getElementById('serial');
  var soundCheck = document.getElementById('sound');
 
@@ -109,9 +108,7 @@ function start(){
 }
 function myTimer() {
   var word = Words[Math.floor(Math.random() * Words.length)];
-  if(Shown.includes(word)){
-    myTimer();
-  }else{
+  
     let finalWord;
     if(serial.checked){
       finalWord = x +2 +'. ' +word;
@@ -123,12 +120,13 @@ function myTimer() {
     
     x++;
     document.getElementById("wat").innerHTML = finalWord;
-    Shown.push(word);
+    Words = Words.remove(finalWord);
+    console.log(Words);
     if (soundCheck.checked) {
       audio.play();
     }
     
-  }
+  
 
   
   
@@ -140,4 +138,15 @@ function myTimer() {
     document.getElementById("wat").style.color = "#0f0";
 	}
 }
+
+Array.prototype.remove = function() {
+  var what, a = arguments, L = a.length, ax;
+  while (L && this.length) {
+      what = a[--L];
+      while ((ax = this.indexOf(what)) !== -1) {
+          this.splice(ax, 1);
+      }
+  }
+  return this;
+};
 
