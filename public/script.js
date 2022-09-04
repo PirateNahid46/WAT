@@ -47,14 +47,14 @@ function loaded(){
   document.getElementById("load").style.display="none";
   size = document.getElementById("noofwords").value;
   
-  ArrayM = splitToChunks(set1, parseInt(size))
+  ArrayM = splitToChunks(set1, parseInt(size)+1)
   for(let l=1; l<=ArrayM.length;l++){
     var g = document.getElementById("set");
     var option = document.createElement("option");
     option.value = l;
     console.log(option.value);
     option.text = "Set "+l;
-    if(ArrayM[l-1].length == parseInt(size)){
+    if(ArrayM[l-1].length == parseInt(size)+1){
       g.append(option);
     }
     else{
@@ -115,7 +115,8 @@ function myTimer() {
     let finalWord;
     if(serial.checked){
       finalWord = x +2 +'. ' +word;
-    }else{
+    }
+    else{
       finalWord = word
     }
     
@@ -133,7 +134,7 @@ function myTimer() {
   
   
   
-  if(x == size){
+  if(x == parseInt(size)){
   	clearInterval(myVar);
     document.getElementById("wat").innerHTML = "Finished";
     document.getElementById("wat").style.color = "#0f0";

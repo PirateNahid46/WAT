@@ -114,6 +114,12 @@ button{
     --txt-size:15px;
   }
   input{
+    font-size: var(--txt-size);
+  }
+  
+
+
+  .check{
     height: 18px;
     width: 18px;
   }
