@@ -120,7 +120,7 @@ function myTimer() {
     
     x++;
     document.getElementById("wat").innerHTML = finalWord;
-    Words = Words.remove(finalWord);
+    Words = Words.remove(word);
     console.log(Words);
     if (soundCheck.checked) {
       audio.play();
