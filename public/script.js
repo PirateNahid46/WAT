@@ -45,6 +45,7 @@ function check(){
 function loaded(){
   document.getElementById("main").style.display="block";
   document.getElementById("load").style.display="none";
+  document.getElementById("reload").style.display ="none";
   size = document.getElementById("noofwords").value;
   
   ArrayM = splitToChunks(set1, parseInt(size)+1)
@@ -136,7 +137,12 @@ function myTimer() {
   	clearInterval(myVar);
     document.getElementById("wat").innerHTML = "Finished";
     document.getElementById("wat").style.color = "#0f0";
+    document.getElementById("reload").style.display ="block";
 	}
+}
+
+function reload(){
+  location.reload(true);
 }
 
 Array.prototype.remove = function() {
