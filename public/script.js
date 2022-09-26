@@ -38,6 +38,7 @@ function check(){
   }else{
     goBtn.innerHTML = 'Go';
     goBtn.removeAttribute('disabled');
+	  clearInterval(checker);
   }
 }
 
