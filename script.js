@@ -108,7 +108,6 @@ function start(){
 }
 function myTimer() {
   var word = Words[Math.floor(Math.random() * Words.length)];
-  
     let finalWord;
     if(serial.checked){
       finalWord = x +2 +'. ' +word;
